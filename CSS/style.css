@@ -2,6 +2,7 @@
     width: 1000px;
     height: 1000px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .square10 {
@@ -10,4 +11,11 @@
     color: white;
     border: 2px solid white;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square_active {
+    color: black;
+    background-color: coral;
 }

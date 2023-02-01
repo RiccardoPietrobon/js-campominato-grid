@@ -1,7 +1,9 @@
 //L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
 //Ogni cella ha un numero progressivo, da 1 a 100.
 //Ci saranno quindi 10 caselle per ognuna delle 10 righe.
-//Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
+//Quando l'utente clicca su ogni cella,
+// la cella cliccata si colora di azzurro ed emetto un messaggio in
+// console con il numero della cella cliccata.
 
 //Bonus
 //Aggiungere una select accanto al bottone di generazione, che fornisca una scelta tra tre diversi livelli di difficoltà:
@@ -20,11 +22,27 @@ function generazione_griglia(grid, dimensione_grid) {
     //ciclo per generare il numero di celle desiderato
     for (let i = 0; i < dimensione_grid; i++) {
 
+        //numeri da inserire
+        const square_text = [i + 1];
+        //console.log(square_text);
+
         //aggiungo un div
         const my_square = document.createElement("div");
 
         //aggiungo le classi desiderate
         my_square.classList.add("square10");
+
+        //aggiungo il numero
+        my_square.append(square_text);
+
+        //funzione click
+        my_square.addEventListener(
+            "click",
+            function () {
+                this.classList.toggle("square_active");
+                console.log("La casella è la n° " + square_text);
+            }
+        )
 
         grid.append(my_square);
     }
