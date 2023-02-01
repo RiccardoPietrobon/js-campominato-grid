@@ -16,11 +16,25 @@
 
 <body>
 
-    <h1 class="p-5">Campo minato</h1>
+    <div class="container py-5">
+
+        <h1 class="py-3">Campo minato</h1>
+
+        <button id="push" type="button" class="btn btn-primary">Genera griglia</button>
+
+        <label for="tipo_di_griglia">Scegli una griglia:</label>
+        <select id="tipo_di_griglia" name="griglia_list">
+            <option value="100" id="lv_1">Difficoltà 1</option>
+            <option value="81" id="lv_2">Difficoltà 2</option>
+            <option value="49" id="lv_3">Difficoltà 3</option>
+        </select>
+
+    </div>
+
 
     <div class="py-5 bg-primary d-flex justify-content-center">
 
-        <div id="box" class="griglia"></div>
+        <div id="box" class="container griglia"></div>
 
     </div>
 

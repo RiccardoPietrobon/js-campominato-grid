@@ -11,13 +11,33 @@
 //- con difficoltà 2 => 81 caselle, con un numero compreso tra 1 e 81, divise in 9 caselle per 9 righe;
 //- con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 
+
+
+/************     CODICE     ********* */
+
+const my_button = document.getElementById("push");
+
+
+my_button.addEventListener(
+    "click",
+    function () {
+
+        const my_grid = document.getElementById("box");
+
+        const chose = document.getElementById("tipo_di_griglia").value;
+
+
+        generazione_griglia(my_grid, chose);
+
+    }
+)
+
 /*********** FUNZIONI **********/
-const my_grid = document.getElementById("box");
-
-generazione_griglia(my_grid, 100)
-
 
 function generazione_griglia(grid, dimensione_grid) {
+
+    //griglia vuota
+    grid.innerHTML = "";
 
     //ciclo per generare il numero di celle desiderato
     for (let i = 0; i < dimensione_grid; i++) {
