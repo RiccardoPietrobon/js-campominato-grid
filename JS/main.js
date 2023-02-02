@@ -26,7 +26,6 @@ my_button.addEventListener(
 
         const chose = document.getElementById("tipo_di_griglia").value;
 
-
         generazione_griglia(my_grid, chose);
 
     }
@@ -50,7 +49,21 @@ function generazione_griglia(grid, dimensione_grid) {
         const my_square = document.createElement("div");
 
         //aggiungo le classi desiderate
-        my_square.classList.add("square10");
+        my_square.classList.add("square");
+
+        if (dimensione_grid == "100") {
+
+            my_square.classList.add("square_10");
+
+        } else if (dimensione_grid == "81") {
+
+            my_square.classList.add("square_9");
+
+        } else {
+
+            my_square.classList.add("square_7");
+
+        }
 
         //aggiungo il numero
         my_square.append(square_text);
